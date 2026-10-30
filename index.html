@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#041329">
+  <meta name="description" content="SHARK | SHOP | GURLAN — Gurlandagi zamonaviy onlayn savdo platformasi. Aqlli tanlov. Ishonchli xarid.">
+  <meta property="og:title" content="SHARK | SHOP | GURLAN">
+  <meta property="og:description" content="Aqlli tanlov. Ishonchli xarid.">
+  <title>SHARK | SHOP | GURLAN — Aqlli tanlov</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Supabase > Project Settings > API: use the Project URL and public anon/publishable key only.
+    window.SHARK_SUPABASE_URL = "https://vunwjsrjfsnbkvdhjgsk.supabase.co";
+    window.SHARK_SUPABASE_ANON_KEY = "sb_publishable_QtzhIzrjCETlTG4mpfOUtQ_BgSJKnKG";
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="ocean-canvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="SHARK SHOP bosh sahifa">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-copy"><strong>SHARK</strong><small>SHOP <i>|</i> GURLAN</small></span>
+      </a>
+      <button class="mobile-menu-toggle icon-button" id="mobile-menu-toggle" aria-label="Menyuni ochish" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Asosiy menyu">
+        <a href="#home" class="nav-link active">Bosh sahifa</a>
+        <a href="#catalog" class="nav-link">Mahsulotlar</a>
+        <a href="#about" class="nav-link">Biz haqimizda</a>
+        <button class="nav-link nav-admin" id="open-admin">Admin <span class="admin-dot"></span></button>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" id="open-cart" aria-label="Savatchani ochish">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+          <span>Savat</span><b id="cart-count">0</b>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="live-pulse"></span> GURLAN · ONLAYN SAVDO</p>
+          <h1>Okean kuchi.<br><span>Tanlov erkinligi.</span></h1>
+          <p class="hero-description">SHARK SHOP — Gurlandagi zamonaviy onlayn savdo platformasi. Kerakli mahsulotlarni qulay tanlang va buyurtma bering.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Mahsulotlarni ko‘rish <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://t.me/jamwidbek_official" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.4 18-3.8-7.8L2 9.5 21 3Z"/><path d="m9.8 13.2 4.7-4.4"/></svg>
+              Telegram orqali bog‘lanish
+            </a>
+          </div>
+          <div class="hero-proof"><span class="proof-icon">✦</span><span><strong>Aqlli tanlov.</strong> Ishonchli xarid.</span><span class="proof-divider"></span><span class="proof-location">Gurlan, O‘zbekiston</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+          <div class="hero-glow"></div>
+          <svg class="hero-shark" viewBox="0 0 640 330" role="img">
+            <defs><linearGradient id="sharkFill" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#b9f4ff"/><stop offset=".48" stop-color="#4caacb"/><stop offset="1" stop-color="#135080"/></linearGradient></defs>
+            <path d="M34 180c65-57 155-83 264-77 38 2 79 11 118 27l91-82-23 109c33 22 61 48 85 77-46 15-93 22-142 19-60-4-114-20-174-21-84-1-154 25-219 30l45-48-45-34Z" fill="url(#sharkFill)" opacity=".86"/>
+            <path d="m246 104 50-78 32 84M412 123l50-40-7 57M272 233l66 60 17-64" fill="#2274a0" opacity=".8"/>
+            <path d="M474 180c25 12 51 24 78 37M445 202c26 14 53 24 82 32" fill="none" stroke="#d3faff" stroke-width="3" opacity=".48"/>
+            <circle cx="433" cy="147" r="5" fill="#031a2d"/>
+          </svg>
+          <div class="hero-art-caption"><span class="caption-line"></span><span>DEEP BLUE<br><b>COLLECTION</b></span></div>
+          <span class="hero-coordinate">41°34' N · 60°23' E</span>
+        </div>
+        <a class="scroll-hint" href="#catalog"><span></span> PASTGA SURING</a>
+      </section>
+
+      <section class="trust-strip section-wrap" aria-label="Do‘kon afzalliklari">
+        <div class="trust-item"><span class="trust-icon">◈</span><span><b>Tanlangan mahsulotlar</b><small>Sifatga e’tibor bilan</small></span></div>
+        <div class="trust-item"><span class="trust-icon">⌖</span><span><b>Qulay buyurtma</b><small>Yetkazib berish yoki olib ketish</small></span></div>
+        <div class="trust-item"><span class="trust-icon">↗</span><span><b>Bevosita aloqa</b><small>Har bir buyurtma bo‘yicha bog‘lanamiz</small></span></div>
+      </section>
+
+      <section class="catalog section-wrap" id="catalog">
+        <div class="section-heading">
+          <div><p class="eyebrow">ONLAYN KATALOG</p><h2>Mahsulotlar<span class="heading-dot">.</span></h2></div>
+          <p class="section-intro">O‘zingizga keraklisini toping.<br>Tanlovlarimiz shu yerda jamlangan.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <input id="product-search" type="search" placeholder="Mahsulot qidirish..." autocomplete="off" aria-label="Mahsulot qidirish">
+            <kbd>⌘ K</kbd>
+          </label>
+          <div class="category-filter" id="category-filter" aria-label="Kategoriya filtri"></div>
+          <span class="catalog-count" id="catalog-count">0 ta mahsulot</span>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state">
+          <div class="empty-art" aria-hidden="true"><span class="empty-ring"></span><span class="empty-symbol">◌</span><span class="empty-bubble bubble-one"></span><span class="empty-bubble bubble-two"></span></div>
+          <p class="eyebrow">KATALOG YANGILANMOQDA</p>
+          <h3>Hozircha mahsulotlar mavjud emas</h3>
+          <p>Yangi mahsulotlar qo‘shilganda shu sahifada paydo bo‘ladi.<br>Yaqin orada yana tashrif buyuring!</p>
+          <button class="button button-secondary small-button" id="empty-contact">Biz bilan bog‘lanish <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="about section-wrap" id="about">
+        <div class="about-visual"><div class="about-emblem"><span>SHARK</span><b>GURLAN</b><i>EST. 2025</i></div><div class="about-lines"></div></div>
+        <div class="about-content"><p class="eyebrow">BIZ HAQIMIZDA</p><h2>Mahalliy savdo.<br><span>Katta imkoniyat.</span></h2><p>SHARK | SHOP | GURLAN — sizga kerakli mahsulotlarni topish va buyurtma berishni osonlashtiradigan mahalliy platforma. Sizga qulay usulda buyurtma qiling, qolganini kelishib olamiz.</p><a class="text-link" href="https://t.me/shark_savdo_sotiq" target="_blank" rel="noopener noreferrer">Telegram kanalimiz <span>↗</span></a></div>
+      </section>
+
+      <section class="contact-banner section-wrap">
+        <div><p class="eyebrow">SAVOLLARINGIZ BORMI?</p><h2>Biz doim aloqadamiz<span>.</span></h2></div>
+        <a class="button button-primary" href="tel:+998931150389">+998 93 115 03 89 <span aria-hidden="true">↗</span></a>
+        <div class="banner-shine" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-wrap">
+      <div class="footer-main">
+        <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">S</span><span class="brand-copy"><strong>SHARK</strong><small>SHOP <i>|</i> GURLAN</small></span></a><p>Aqlli tanlov.<br>Ishonchli xarid.</p></div>
+        <div class="footer-links"><h3>Biz bilan</h3><a href="https://t.me/shark_savdo_sotiq" target="_blank" rel="noopener noreferrer">Telegram do‘kon <span>↗</span></a><a href="https://t.me/jamwidbek_official" target="_blank" rel="noopener noreferrer">Shaxsiy Telegram <span>↗</span></a><a href="https://www.instagram.com/shark_iot/" target="_blank" rel="noopener noreferrer">Instagram do‘kon <span>↗</span></a><a href="https://www.instagram.com/js_muxandis/" target="_blank" rel="noopener noreferrer">Robotics & Engineering <span>↗</span></a></div>
+        <div class="footer-contact"><h3>Aloqa</h3><a class="footer-phone" href="tel:+998931150389">+998 93 115 03 89</a><p>Gurlan tumani, Xorazm viloyati</p><button class="footer-admin-link" id="footer-admin">Admin panelga kirish</button></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> SHARK | SHOP | GURLAN</span><span class="footer-status"><i></i> <span id="footer-status-text">Online xarid platformasi</span></span><a href="#home">Yuqoriga ↑</a></div>
+    </footer>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog class="modal" id="product-modal" aria-labelledby="product-modal-title">
+    <button class="modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div id="product-modal-content"></div>
+  </dialog>
+
+  <dialog class="modal modal-cart" id="cart-modal" aria-labelledby="cart-title">
+    <button class="modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div class="modal-heading"><p class="eyebrow">XARIDLAR RO‘YXATI</p><h2 id="cart-title">Savatcha<span>.</span></h2></div>
+    <div id="cart-content"></div>
+  </dialog>
+
+  <dialog class="modal modal-checkout" id="checkout-modal" aria-labelledby="checkout-title">
+    <button class="modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div class="modal-heading"><p class="eyebrow">BUYURTMANI RASMIYLASHTIRISH</p><h2 id="checkout-title">Ma’lumotlaringiz<span>.</span></h2><p class="modal-subtitle">Buyurtmani tasdiqlash uchun ma’lumotlarni to‘ldiring.</p></div>
+    <form id="checkout-form" novalidate>
+      <div class="fulfillment-options" role="group" aria-label="Buyurtma usuli">
+        <label class="fulfillment-option selected"><input type="radio" name="fulfillment" value="delivery" checked><span class="option-icon">⌖</span><span><b>Yetkazib berish</b><small>Manzilingizga olib boramiz</small></span></label>
+        <label class="fulfillment-option"><input type="radio" name="fulfillment" value="pickup"><span class="option-icon">⌂</span><span><b>Olib ketish</b><small>O‘zingiz kelib olasiz</small></span></label>
+      </div>
+      <div class="form-grid">
+        <label class="field"><span>Ism va familiya <i>*</i></span><input name="name" required minlength="3" autocomplete="name" placeholder="Masalan, Ali Valiyev"></label>
+        <label class="field"><span>Telefon raqam <i>*</i></span><input name="phone" required type="tel" autocomplete="tel" inputmode="tel" placeholder="+998 90 123 45 67"></label>
+        <label class="field delivery-field"><span>Yetkazib berish manzili <i>*</i></span><input name="address" id="delivery-address" autocomplete="street-address" placeholder="Viloyat, tuman, ko‘cha, uy"></label>
+        <p class="delivery-help delivery-field" id="delivery-help"></p>
+        <div class="location-row delivery-field"><button class="button button-secondary location-button" type="button" id="get-location">⌖ Joylashuvni aniqlash</button><span id="location-status">GPS ixtiyoriy</span></div>
+        <label class="field full-field"><span>Qo‘shimcha izoh <small>(ixtiyoriy)</small></span><textarea name="note" rows="2" placeholder="Buyurtma haqida qo‘shimcha ma’lumot..."></textarea></label>
+      </div>
+      <div class="pickup-info" id="pickup-info" hidden><span>⌂</span><p>Olib ketish haqida vaqtni kelishish uchun<br><a href="tel:+998931150389">+998 93 115 03 89</a> yoki <a href="https://t.me/jamwidbek_official" target="_blank" rel="noopener noreferrer">Telegram</a> orqali bog‘laning.</p></div>
+      <div class="checkout-summary" id="checkout-summary"></div>
+      <div class="local-storage-notice" id="checkout-storage-note"><span>ⓘ</span> Buyurtma shu brauzerda saqlanadi. Barcha mijozlardan buyurtma qabul qilish uchun backend kerak.</div>
+      <button class="button button-primary submit-order" type="submit">Buyurtmani tasdiqlash <span aria-hidden="true">↗</span></button>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal-admin-login" id="admin-login-modal" aria-labelledby="admin-login-title">
+    <button class="modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div class="admin-login-mark">S</div>
+    <p class="eyebrow">SHARK SHOP · BOSHQARUV</p><h2 id="admin-login-title">Admin panel<span>.</span></h2>
+    <p class="modal-subtitle" id="admin-login-subtitle">Davom etish uchun admin hisobiga kiring.</p>
+    <form id="admin-login-form">
+      <label class="field"><span id="admin-username-label">Login</span><input name="username" autocomplete="username" required placeholder="Login"></label>
+      <label class="field"><span>Parol</span><div class="password-field"><input name="password" type="password" autocomplete="current-password" required placeholder="Parol"><button type="button" id="toggle-password" aria-label="Parolni ko‘rsatish">◉</button></div></label>
+      <label class="field" id="confirm-password-field" hidden><span>Parolni tasdiqlang</span><input name="confirmPassword" type="password" autocomplete="new-password" minlength="10" placeholder="Parolni qayta kiriting"></label>
+      <p class="form-error" id="login-error" role="alert"></p>
+      <button class="button button-primary submit-order" id="admin-login-submit" type="submit">Kirish <span aria-hidden="true">↗</span></button>
+    </form>
+    <p class="security-note" id="admin-security-note">Parol va buyurtmalar ushbu brauzerda saqlanadi, serverda himoyalanmagan. Haqiqiy admin xavfsizligi va barcha mijozlar uchun umumiy ma’lumotlar uchun backend kerak.</p>
+  </dialog>
+
+  <dialog class="modal admin-dashboard-modal" id="admin-modal" aria-labelledby="admin-heading">
+    <button class="modal-close admin-modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <a class="brand admin-brand" href="#home"><span class="brand-mark">S</span><span class="brand-copy"><strong>SHARK</strong><small>ADMIN PANEL</small></span></a>
+        <nav class="admin-nav" aria-label="Admin bo‘limlari">
+          <button class="admin-nav-item active" data-admin-view="overview"><span>◫</span> Umumiy</button>
+          <button class="admin-nav-item" data-admin-view="products"><span>▤</span> Mahsulotlar</button>
+          <button class="admin-nav-item" data-admin-view="orders"><span>▣</span> Buyurtmalar <b id="new-order-count">0</b></button>
+          <button class="admin-nav-item" data-admin-view="settings"><span>⚙</span> Sozlamalar</button>
+        </nav>
+        <div class="admin-sidebar-bottom"><span class="admin-mode"><i></i> <span id="admin-mode-text">Mahalliy saqlash</span></span><button id="admin-logout" class="logout-button">Chiqish <span>↗</span></button></div>
+      </aside>
+      <section class="admin-main">
+        <div class="admin-topbar"><div><p class="eyebrow">SHARK SHOP · BOSHQARUV PANELI</p><h2 id="admin-heading">Umumiy ko‘rinish</h2></div><span class="admin-date" id="admin-date"></span></div>
+        <div id="admin-view-content"></div>
+      </section>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal-product-form" id="product-form-modal" aria-labelledby="product-form-title">
+    <button class="modal-close" data-close-dialog aria-label="Yopish">×</button>
+    <div class="modal-heading"><p class="eyebrow">KATALOG BOSHQARUVI</p><h2 id="product-form-title">Mahsulot qo‘shish<span>.</span></h2></div>
+    <form id="product-form">
+      <input type="hidden" name="id">
+      <label class="field"><span>Mahsulot nomi <i>*</i></span><input name="title" required maxlength="100" placeholder="Mahsulot nomi"></label>
+      <div class="form-grid">
+        <label class="field"><span>Narxi (so‘m) <i>*</i></span><input name="price" type="number" min="1" step="1" required placeholder="150000"></label>
+        <label class="field"><span>Kategoriya <i>*</i></span><input name="category" list="category-suggestions" required maxlength="50" placeholder="Masalan, Elektronika"><datalist id="category-suggestions"></datalist></label>
+      </div>
+      <label class="field"><span>Mahsulot rasmi</span><input name="image" type="file" accept="image/*"><small class="field-hint">Rasm yuklash (4 MB gacha) yoki quyida URL kiriting.</small></label>
+      <label class="field"><span>Rasm URL <small>(ixtiyoriy)</small></span><input name="imageUrl" type="url" placeholder="https://example.com/image.jpg"></label>
+      <label class="field"><span>Tavsif <i>*</i></span><textarea name="description" rows="4" required maxlength="600" placeholder="Mahsulot haqida qisqacha..."></textarea></label>
+      <label class="availability-toggle"><input name="available" type="checkbox" checked><span class="toggle-track"></span><span>Sotuvda mavjud</span></label>
+      <p class="form-error" id="product-form-error" role="alert"></p>
+      <button class="button button-primary submit-order" type="submit">Saqlash <span aria-hidden="true">↗</span></button>
+    </form>
+  </dialog>
+</body>
+</html>
